@@ -1,0 +1,29 @@
+{
+    "data": [
+        {
+            "correct_numbers": 7,
+            "extra_numbers": 0,
+            "amount": 1000000
+        },
+        {
+            "correct_numbers": 6,
+            "extra_numbers": 0,
+            "amount": 12500
+        },
+        {
+            "correct_numbers": 5,
+            "extra_numbers": 0,
+            "amount": 720.50
+        },
+        {
+            "correct_numbers": 4,
+            "extra_numbers": 0,
+            "amount": 50.90
+        },
+        {
+            "correct_numbers": 3,
+            "extra_numbers": 0,
+            "amount": 25.90
+        }
+    ]
+}

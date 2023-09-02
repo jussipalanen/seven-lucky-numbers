@@ -1,26 +1,23 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
-</template>
-
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+<script setup>
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<template>
+  <header>
+  </header>
+  <main class="container">
+    <router-view v-slot="{ Component, route }">
+      <Transition name="fade" mode="out-in">
+        <div :key="route.name">
+          <component :is="Component" />
+        </div>
+      </Transition>
+    </router-view>
+  </main>
+  <footer class="footer bg-dark">
+    <div class="container">
+      <p class="text-white">
+        © <a class="text-white">Jussi Alanen</a>. All Rights Reserved.
+      </p>
+    </div>
+  </footer>
+</template>
