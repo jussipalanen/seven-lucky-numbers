@@ -39,7 +39,7 @@
         {
             "numbers": 5,
             "extra_numbers": 2,
-            "amount": 6500,
+            "amount": 5000,
             "winners": 0
         },
         {
@@ -51,43 +51,37 @@
         {
             "numbers": 5,
             "extra_numbers": 0,
-            "amount": 2500,
+            "amount": 3000,
             "winners": 0
         },
         {
             "numbers": 4,
             "extra_numbers": 2,
+            "amount": 2000,
+            "winners": 0
+        },
+        {
+            "numbers": 4,
+            "extra_numbers": 1,
             "amount": 1500,
             "winners": 0
         },
         {
             "numbers": 4,
-            "extra_numbers": 1,
-            "amount": 1000,
-            "winners": 0
-        },
-        {
-            "numbers": 4,
             "extra_numbers": 0,
-            "amount": 750,
+            "amount": 1000,
             "winners": 0
         },
         {
             "numbers": 3,
             "extra_numbers": 2,
-            "amount": 500,
+            "amount": 750,
             "winners": 0
         },
         {
             "numbers": 3,
             "extra_numbers": 1,
-            "amount": 350,
-            "winners": 0
-        },
-        {
-            "numbers": 3,
-            "extra_numbers": 0,
-            "amount": 200,
+            "amount": 500,
             "winners": 0
         }
     ]

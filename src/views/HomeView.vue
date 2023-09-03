@@ -163,16 +163,16 @@ export default {
   components: {
     'numbersRow': NumbersRow
   },
-  created: function(){         
-    setInterval(function(){
-      this.balance += 100;
-    }.bind(this), 1000);
-  }
+  // created: function () {
+  //   setInterval(function () {
+  //     this.balance += 100;
+  //   }.bind(this), 1000);
+  // }
 }
 </script>
 <template>
   <div class="row">
-    <div class="col-4">
+    <div class="col-2">
       <div class="row">
         <div class="col-12 mb-4">
           <h1 class="mb-4">Game</h1>
@@ -200,7 +200,7 @@ export default {
       </div>
     </div>
 
-    <div class="col-8">
+    <div class="col-4">
       <div class="row">
         <div v-if="results" class="results col-12 mb-4">
           <h2>Results</h2>
@@ -248,6 +248,11 @@ export default {
           </div>
         </div>
 
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div class="row">
         <div class="col-12 mb-4">
           <form action="" method="POST" @submit.prevent="submit($event)">
             <div class="form-group mb-4">
