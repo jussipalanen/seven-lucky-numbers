@@ -1,25 +1,25 @@
 export const func = {
-    generateNumbers: () => {
+    generateNumbers: (length = 7, excluded = []) => {
         var numbers = [];
-        for (let index = 0; index < 7; index++) {
+
+        if (length == null || length < 1) { 
+            length = 7 
+        }
+
+        let index = 0;
+        while (index < length) 
+        {
             let rndNumber = Math.floor(Math.random() * 40) + 1;
-            if (numbers.includes(rndNumber) === false) {
+            if( excluded.includes(rndNumber) === false && numbers.includes(rndNumber) === false )
+            {
                 numbers.push(rndNumber);
+                index++;
             }
-            else {
-                index--;
-            }
-
-            if (index < 0) {
-                index = 0;
-            }
-
         }
         numbers = numbers.sort(function (a, b) { return a - b });
         return numbers;
     },
-    getRowCost: () =>
-    {
+    getRowCost: () => {
         return 4;
     }
 

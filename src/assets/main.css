@@ -1,5 +1,6 @@
-:root{
+:root {
     --circle-color: #ffe000;
+    --extra-cirle-color: purple;
     --circle-color-field: #a69728;
 }
 
@@ -21,8 +22,19 @@ main {
     min-height: 100vh;
 }
 
-.number-circle
+.navbar {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 86, 121, 1) 100%);
+    height: 140px;
+}
+
+.navbar a.navbar-brand
 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+.number-circle {
     float: left;
     background: var(--circle-color);
     border: 0;
@@ -35,13 +47,24 @@ main {
     border: 3px solid #00000000;
 }
 
-.number-circle.found
-{
+.number-circle-sign {
+    font-size: 24px;
+    font-weight: bold;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+    line-height: 100px;
+}
+
+.number-circle.extra-number {
+    background: var(--extra-cirle-color);
+}
+
+.number-circle.found {
     border: 3px solid #48d148;
 }
 
-.result-circle 
-{
+.result-circle {
     float: left;
     margin: 10;
     border-radius: 50%;
@@ -56,14 +79,25 @@ main {
     font-weight: bold;
 }
 
-.number-circle input 
-{
+.result-extra-circle {
+    background: #e0a2ff;
+}
+
+.results-extra-sign {
+    font-size: 24px;
+    font-weight: bold;
+    height: 60px;
+    float: left;
+    margin-right: 10px;
+    line-height: 60px;
+}
+
+.number-circle input {
     background: var(--circle-color-field);
     color: #fff;
 }
 
-.balance
-{
+.balance {
     font-weight: bold;
     font-size: 2.5rem;
 }
@@ -75,7 +109,10 @@ footer {
     text-align: center;
 }
 
-.button-spaces
-{
+.hidden {
+    display: none !important;
+}
+
+.button-spaces {
     margin-right: 10px;
 }

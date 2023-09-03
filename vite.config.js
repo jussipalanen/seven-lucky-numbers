@@ -9,6 +9,9 @@ export default defineConfig({
     productionSourceMap: false, // Previously it was set as true
     cssSourceMap: false, // Previously set as true
   },
+  server: {
+    port: 5148
+  },
   resolve: {
     alias: {
       vue: '@vue/compat',

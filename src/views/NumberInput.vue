@@ -3,17 +3,18 @@ export default {
     data() {
         return {
             number: null,
+            type: 'number[]',
         }
     },
-    props: ['number'],
+    props: ['number', 'type'],
     methods: {
         setNumber( number )
         {
             this.number = number;
         },
         setMinMax(number) {
-            if (number > 40) {
-                return 40;
+            if (number > this.$MAX_NUMBERS) {
+                return this.$MAX_NUMBERS;
             }
             else if (number < 1) {
                 return 1;
@@ -22,7 +23,7 @@ export default {
         },
         findNewNumber( numbers )
         {
-            for (let number = 1; number <= 40; number++) 
+            for (let number = 1; number <= this.$MAX_NUMBERS; number++) 
             {
                 if( numbers.includes(number) === false )
                 {
@@ -36,7 +37,7 @@ export default {
             let value = this.setMinMax(parseInt(el.value));
             el.value = value;
             const row = el.closest('.row');
-            const numberInputs = row.querySelectorAll("input[name='number[]']");
+            const numberInputs = row.querySelectorAll(".number-input");
             const reservedNumbers = [];
             for (let x = 0; x < numberInputs.length; x++) {
                 const numberInput = numberInputs[x];
@@ -53,5 +54,5 @@ export default {
 }
 </script>
 <template>
-    <input type="text" name="number[]" :value="number" class="form-control" @change="checkNumbers($event)">
+    <input type="text" :name="type" :value="number" class="form-control number-input" @change="checkNumbers($event)">
 </template>

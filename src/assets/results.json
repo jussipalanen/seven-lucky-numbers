@@ -1,29 +1,94 @@
 {
     "data": [
         {
-            "correct_numbers": 7,
-            "extra_numbers": 0,
-            "amount": 1000000
+            "numbers": 7,
+            "extra_numbers": 2,
+            "amount": 100000000,
+            "winners": 0
         },
         {
-            "correct_numbers": 6,
-            "extra_numbers": 0,
-            "amount": 12500
+            "numbers": 7,
+            "extra_numbers": 1,
+            "amount": 10000000,
+            "winners": 0
         },
         {
-            "correct_numbers": 5,
+            "numbers": 7,
             "extra_numbers": 0,
-            "amount": 720.50
+            "amount": 1000000,
+            "winners": 0
         },
         {
-            "correct_numbers": 4,
-            "extra_numbers": 0,
-            "amount": 50.90
+            "numbers": 6,
+            "extra_numbers": 2,
+            "amount": 50000,
+            "winners": 0
         },
         {
-            "correct_numbers": 3,
+            "numbers": 6,
+            "extra_numbers": 1,
+            "amount": 30000,
+            "winners": 0
+        },
+        {
+            "numbers": 6,
             "extra_numbers": 0,
-            "amount": 25.90
+            "amount": 12500,
+            "winners": 0
+        },
+        {
+            "numbers": 5,
+            "extra_numbers": 2,
+            "amount": 6500,
+            "winners": 0
+        },
+        {
+            "numbers": 5,
+            "extra_numbers": 1,
+            "amount": 4000,
+            "winners": 0
+        },
+        {
+            "numbers": 5,
+            "extra_numbers": 0,
+            "amount": 2500,
+            "winners": 0
+        },
+        {
+            "numbers": 4,
+            "extra_numbers": 2,
+            "amount": 1500,
+            "winners": 0
+        },
+        {
+            "numbers": 4,
+            "extra_numbers": 1,
+            "amount": 1000,
+            "winners": 0
+        },
+        {
+            "numbers": 4,
+            "extra_numbers": 0,
+            "amount": 750,
+            "winners": 0
+        },
+        {
+            "numbers": 3,
+            "extra_numbers": 2,
+            "amount": 500,
+            "winners": 0
+        },
+        {
+            "numbers": 3,
+            "extra_numbers": 1,
+            "amount": 350,
+            "winners": 0
+        },
+        {
+            "numbers": 3,
+            "extra_numbers": 0,
+            "amount": 200,
+            "winners": 0
         }
     ]
 }

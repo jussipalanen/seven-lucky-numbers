@@ -9,14 +9,13 @@ import './assets/main.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import 'bootstrap-vue/dist/bootstrap-vue.css';
 
-import {func} from '../src/func.js'
-import User from './provider/User.js'
+Vue.prototype.$MIN_NUMBERS = 1;
+Vue.prototype.$MAX_NUMBERS = 40;
+
+import { func } from '../src/func.js'
 
 // global app vars
-Vue.prototype.$balance = 1000
-Vue.prototype.$costs = 0
-Vue.prototype.$func  = func
-Vue.prototype.$user = (new User(10000))
+Vue.prototype.$func = func
 
 import moment from 'moment';
 Vue.prototype.moment = moment
@@ -39,12 +38,20 @@ const router = new createRouter({
 });
 
 // Change title name of web page after loading the page
-router.beforeEach((to, from, next) => {
-    document.title = to.name + ' | ' + import.meta.env.VITE_SITE_NAME;
-    next();
-});
+// router.beforeEach((to, from, next) => {
+//     document.title = to.name + ' | ' + import.meta.env.VITE_SITE_NAME;
+//     next();
+// });
 
 export default router;
+
+Vue.mixin({
+    data: function () {
+        return {
+            globalVar: 'global'
+        }
+    }
+})
 
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
