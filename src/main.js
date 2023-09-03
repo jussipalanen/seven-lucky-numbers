@@ -1,5 +1,5 @@
 // Main library files import
-import Vue, { createApp } from '../node_modules/@vue/compat';
+import Vue, { createApp } from '@vue/compat';
 import { createRouter, createWebHistory } from 'vue-router'
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
 import App from './App.vue'
