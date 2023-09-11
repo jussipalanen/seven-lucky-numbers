@@ -71,7 +71,7 @@ export default {
                     <component :is="numberInput" number="" type="number[]"></component>
                 </div>
             </div>
-            <div class="number-circle-sign">
+            <div class="number-circle-sign mb-4">
                 +
             </div>
             <div class="list-of-numbers mb-4">

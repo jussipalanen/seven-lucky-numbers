@@ -83,7 +83,14 @@ main {
 
 .number-circle.found {
     border: 3px solid #48d148;
+    background-color: #b1ffb1;
 }
+
+.number-circle.extra-number.found,
+.number-circle.extra-number.found input {
+    color: #000;
+}
+
 
 .result-circle {
     float: left;

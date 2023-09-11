@@ -132,6 +132,7 @@ export default {
         const numbers = form.getElementsByClassName('number-row');
         const generatedNumbers = this.generateNumbers(7);
         const generatedExtraNumbers = this.generateNumbers(2, generatedNumbers);
+        const rowsCalcTable = [];
 
         if (this.costs <= this.balance) {
           this.updateBalance(-this.costs);
@@ -144,9 +145,11 @@ export default {
             let extraNumsFound = this.calculateCorrectNumbers(extraInputs, generatedExtraNumbers);
             this.profitWinTotal += this.calculateProfit(numsFound, extraNumsFound);
             this.balance += this.profitWinTotal;
+            rowsCalcTable[i] = this.profitWinTotal;
           }
 
           this.results = {
+            rowsCalcTable: rowsCalcTable,
             numbers: generatedNumbers,
             extra: generatedExtraNumbers,
           };
