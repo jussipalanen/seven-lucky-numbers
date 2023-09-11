@@ -17,10 +17,9 @@ export default {
         },
         generateNumbers(event) {
             const defaultNumbers = this.initDefaultNumbers(event);
-            this.initExtraNumbers( event, defaultNumbers );
+            this.initExtraNumbers(event, defaultNumbers);
         },
-        initDefaultNumbers(event)
-        {
+        initDefaultNumbers(event) {
             const el = event.target;
             const row = el.closest('.row');
 
@@ -33,8 +32,7 @@ export default {
             }
             return randomNumbers;
         },
-        initExtraNumbers(event, excludedNumbers)
-        {
+        initExtraNumbers(event, excludedNumbers) {
             const el = event.target;
             const row = el.closest('.row');
             const randomNumbers = this.$func.generateNumbers(2, excludedNumbers);
@@ -67,18 +65,22 @@ export default {
 </script>
 <template>
     <div class="row number-row mb-4">
-        <div class="col-8">
-            <div v-for="numberInput in numberInputs" class="number-circle">
-                <component :is="numberInput" number="" type="number[]"></component>
+        <div class="col-xl-8 col-lg-12 pt-2">
+            <div class="list-of-numbers mb-4">
+                <div v-for="numberInput in numberInputs" class="number-circle">
+                    <component :is="numberInput" number="" type="number[]"></component>
+                </div>
             </div>
             <div class="number-circle-sign">
                 +
             </div>
-            <div v-for="numberInput in extraNumberInputs" class="number-circle extra-number">
-                <component :is="numberInput" number="" type="extra[]"></component>
+            <div class="list-of-numbers mb-4">
+                <div v-for="numberInput in extraNumberInputs" class="number-circle extra-number">
+                    <component :is="numberInput" number="" type="extra[]"></component>
+                </div>
             </div>
         </div>
-        <div class="col-4 text-left pt-4 pb-4">
+        <div class="col-xl-4 col-lg-12 text-left pt-2 pb-4">
             <input type="button" class="btn btn-primary btn-lg button-spaces" name="generate" value="Generate"
                 @click="generateNumbers($event)">
             <input type="button" class="btn btn-danger btn-lg" name="delete" value="X" @click="deleteRow($event)">

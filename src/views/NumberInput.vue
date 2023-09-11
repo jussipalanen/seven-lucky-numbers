@@ -54,5 +54,5 @@ export default {
 }
 </script>
 <template>
-    <input type="text" :name="type" :value="number" class="form-control number-input" @change="checkNumbers($event)">
+    <input type="text" :name="type" :value="number" class="number-input" data-lpignore="true" @change="checkNumbers($event)">
 </template>

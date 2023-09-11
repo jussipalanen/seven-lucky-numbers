@@ -172,7 +172,8 @@ export default {
 </script>
 <template>
   <div class="row">
-    <div class="col-2">
+    <!-- Intro text start -->
+    <div class="col-xl-12 col-lg-12">
       <div class="row">
         <div class="col-12 mb-4">
           <h1 class="mb-4">Game</h1>
@@ -199,15 +200,16 @@ export default {
         </div>
       </div>
     </div>
-
-    <div class="col-4">
+    <!-- Intro text ends -->
+    <!-- Results start -->
+    <div class="col-xl-6 col-lg-12">
       <div class="row">
-        <div v-if="results" class="results col-12 mb-4">
+        <div v-if="results" class="results col-lg-12 mb-4">
           <h2>Results</h2>
           <button class="btn btn-primary mt-4 mb-4" @click.stop="toggleProfitSharing">{{ profitToggleText }}</button>
 
           <div class="row">
-            <div class="col-12">
+            <div class="col-lg-12">
               <div v-for="result in results.numbers" class="result-circle">
                 {{ result }}
               </div>
@@ -250,11 +252,12 @@ export default {
 
       </div>
     </div>
-
-    <div class="col-6">
+    <!-- Results ends -->
+    <!-- Play controls start -->
+    <div class="col-xl-6 col-lg-12">
       <div class="row">
-        <div class="col-12 mb-4">
-          <form action="" method="POST" @submit.prevent="submit($event)">
+        <div class="col-lg-12 mb-4">
+          <form action="" method="POST" @submit.prevent="submit($event)" autocomplete="off">
             <div class="form-group mb-4">
               <input type="button" class="btn btn-primary button-spaces" value="Add +1 row" @click="addRow(1)">
               <input type="button" class="btn btn-primary button-spaces" value="Add +5 rows" @click="addRow(5)">
@@ -274,6 +277,7 @@ export default {
         </div>
       </div>
     </div>
+    <!-- Play controls ends -->
 
   </div>
 </template>
